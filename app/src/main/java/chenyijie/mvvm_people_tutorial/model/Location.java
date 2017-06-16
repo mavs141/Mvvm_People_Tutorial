@@ -12,10 +12,10 @@ import java.io.Serializable;
  */
 
 public class Location implements Parcelable{
-    public String street;
-    public String city;
-    public String state;
-    public String zip;
+    @SerializedName("street") public String street;
+    @SerializedName("city") public String city;
+    @SerializedName("state") public String state;
+    @SerializedName("zip") public String zip;
 
     protected Location(Parcel in) {
         street = in.readString();

@@ -12,9 +12,9 @@ import java.io.Serializable;
  */
 
 public class Picture implements Parcelable{
-    public String large;
-    public String medium;
-    public String thumbnail;
+    @SerializedName("large") public String large;
+    @SerializedName("medium") public String medium;
+    @SerializedName("thumbnail") public String thumbnail;
 
     protected Picture(Parcel in) {
         large = in.readString();

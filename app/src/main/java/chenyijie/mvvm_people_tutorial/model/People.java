@@ -18,14 +18,15 @@ import java.io.Serializable;
  */
 
 public class People implements Parcelable{
-    public String gender;
-    public Name name;
-    public Location location;
-    public String email;
-    public Login login;
-    public String phone;
-    public String cell;
-    public Picture picture;
+    // 記得加上serializedName讓json可以找到對應的POJO
+    @SerializedName("gender") public String gender;
+    @SerializedName("name") public Name name;
+    @SerializedName("location") public Location location;
+    @SerializedName("email") public String email;
+    @SerializedName("login") public Login login;
+    @SerializedName("phone") public String phone;
+    @SerializedName("cell") public String cell;
+    @SerializedName("picture") public Picture picture;
 
     public String fullName;
     public boolean hasEmail(){

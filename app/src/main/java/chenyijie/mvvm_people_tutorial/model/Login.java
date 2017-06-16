@@ -12,7 +12,7 @@ import java.io.Serializable;
  */
 
 public class Login implements Parcelable{
-    public String userName;
+    @SerializedName("userName") public String userName;
 
     protected Login(Parcel in) {
         userName = in.readString();

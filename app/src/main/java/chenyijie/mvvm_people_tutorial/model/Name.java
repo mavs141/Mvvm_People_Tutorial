@@ -12,9 +12,9 @@ import java.io.Serializable;
  */
 
 public class Name implements Parcelable{
-    public String title;
-    public String firstName;
-    public String lastName;
+    @SerializedName("title") public String title;
+    @SerializedName("first") public String firstName;
+    @SerializedName("last") public String lastName;
 
     protected Name(Parcel in) {
         title = in.readString();
